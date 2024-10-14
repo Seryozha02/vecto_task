@@ -8,8 +8,7 @@ import genresIcon from "../icons/genres.png";
 import watchLaterIcon from "../icons/watchLater.png";
 import userIcon from "../icons/user.png";
 
-function SideBar() {
-  const [isHover, setIsHover] = useState(false);
+function SideBar({isHover, setIsHover}) {
 
   return (
     <div

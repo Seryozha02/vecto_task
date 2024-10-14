@@ -2,7 +2,9 @@ import vectoStyles from "../cssFolder/Vecto.module.css";
 import playIcon from "../icons/play.png";
 import { useEffect, useState } from "react";
 
-function Vecto() {
+function Vecto({isHover}) {
+  console.log(isHover)
+
   const [eachMovie, setEachMovie] = useState();
   const [currentMovieIndex, setCurrentMovieIndex] = useState(null);
   const [data, setData] = useState([]);
@@ -46,7 +48,7 @@ function Vecto() {
   };
 
   return (
-    <div className={vectoStyles.vecto}>
+    <div className={!isHover ? vectoStyles.vecto : vectoStyles.vectoBlurred}>
       {videoPlaying && (
         <video
           className={vectoStyles.backgroundVideo}
@@ -66,7 +68,7 @@ function Vecto() {
         </video>
       )}
 
-      <div className={vectoStyles.movieInfo} style={videoPlaying ? { zIndex: "0" } : { zIndex: "1" }}>
+      <div className={vectoStyles.movieInfo}>
         <p style={{ fontSize: "25px" }}>{!videoPlaying ? data.Featured?.Category : eachMovie?.Category}</p>
         <span className={vectoStyles.movieTitle}>
           <p style={{ fontSize: "55px", fontWeight: "bold" }}>{!videoPlaying ? data.Featured?.Title : eachMovie?.Title}</p>
