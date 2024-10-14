@@ -1,0 +1,118 @@
+.sideBar {
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: black;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-left: 25px;
+    padding-bottom: 45px;
+    transform: translateX(0px);
+    transition: width 0.3s ease-out, transform 0.3s ease-out;
+  }
+  
+.sideBarActive {
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: black;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-left: 25px;
+    transform: translateX(0px);
+    transition: width 0.3s ease-out, transform 0.3s ease-out;
+  }
+
+  .sideBar:hover {
+    width: 250px;
+    transform: translateX(0);
+  }
+
+  .userInfo {
+    display: none;
+  }
+
+  .userInfoActive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+  }
+
+  .userIconActive {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+    cursor: pointer;
+    object-fit: contain;
+  }
+
+  .userInfoActive p {
+    color: white;
+    cursor: pointer;
+  }
+
+  .sidebarMenuActive {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  .menuSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+    column-gap: 20px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .menuSectionActive {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+    column-gap: 20px;
+    width: 170px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .menuSectionActive:hover {
+    background: rgba(59, 72, 109, 1);
+  }
+
+  .menuSectionActive p {
+    color: white;
+  }
+
+  .bottomOfsideBar {
+    display: none;
+  }
+
+  .bottomOfsideBarActive {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  .bottomOfsideBarActive p {
+    color: white;
+    cursor: pointer;
+  }
